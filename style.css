@@ -160,7 +160,7 @@ if width < max-width; let the browser use width. */
     background-image: url("/images/bg-pattern-desktop.svg");
     background-size: 25rem;
     background-repeat: no-repeat;
-    background-position: -13% center;
+    background-position: -5% 55%;
   }
 
   .card-box {
@@ -187,7 +187,7 @@ if width < max-width; let the browser use width. */
     top: auto;
     left: auto;
     transform: translateX(-4rem);
-    max-width: 25rem;
+    max-width: 30rem;
   }
 
   .card-text {
