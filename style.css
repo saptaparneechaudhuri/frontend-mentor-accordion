@@ -49,6 +49,11 @@ h3 {
   padding: 2.875rem 1.5rem;
 }
 
+.card-text h1 {
+  font-size: 2rem;
+  color: var(--text-grayish-dark-blue-extreme);
+}
+
 .card-box {
   display: none;
 }
