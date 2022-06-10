@@ -150,7 +150,7 @@ if width < max-width; let the browser use width. */
 
 @media (min-width: 56rem) {
   body {
-    padding: 5rem;
+    padding: 5rem 5rem;
   }
   .card {
     display: flex;
@@ -158,9 +158,9 @@ if width < max-width; let the browser use width. */
     padding: 4.375rem 6.25rem 4.375rem 0;
     position: relative;
     background-image: url("/images/bg-pattern-desktop.svg");
-    background-size: 25rem;
+    background-size: 39rem;
     background-repeat: no-repeat;
-    background-position: -5% 55%;
+    background-position: -65% 70%;
   }
 
   .card-box {
