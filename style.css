@@ -137,6 +137,10 @@ if width < max-width; let the browser use width. */
   overflow-y: auto;
 }
 
+.attribution {
+  margin-top: 10px;
+}
+
 /* Desktop */
 
 @media (min-width: 56rem) {
