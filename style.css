@@ -139,7 +139,7 @@ if width < max-width; let the browser use width. */
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.8s ease;
-  overflow-y: auto;
+  overflow-y: scroll;
 }
 
 .attribution {
