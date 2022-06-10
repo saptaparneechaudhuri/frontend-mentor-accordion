@@ -7,20 +7,31 @@
 
 document.querySelectorAll(".accordion-button").forEach((item) => {
   item.addEventListener("click", (event) => {
-    var panel = item.nextElementSibling;
+    let panel = item.nextElementSibling;
     if (panel.style.maxHeight) {
-      console.log(panel.style.maxHeight);
+      //   console.log("here in if");
       panel.style.maxHeight = null;
-    } else {
-      console.log("here in else");
-      let active = document.querySelectorAll(" .accordion-button.open");
 
+      item.classList.remove("open");
+    } else {
+      //   console.log("here in else");
+      let active = document.querySelectorAll(" .accordion-button.open");
+      //   console.log(active);
       for (let j = 0; j < active.length; j++) {
-        console.log(active[j].nextElementSibling);
         active[j].classList.remove("open");
-        // removes the open class and sets the height of the body to 0
+
+        // active[j].after.style.transform = rotate("180deg");
+        // console.log("open removed");
         active[j].nextElementSibling.style.maxHeight = null;
       }
+      //   if (item.classList.contains("open")) {
+      //     let accBodyHeight = panel.clientHeight;
+      //     accBodyHeight = "50px";
+      //     panel.style.maxHeight = accBodyHeight;
+      //     //   console.log(item.nextElementSibling);
+      //   } else {
+      //     panel.style.maxHeight = "0";
+      //   }
       item.classList.toggle("open");
       panel.style.maxHeight = "50px";
     }
