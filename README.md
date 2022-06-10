@@ -8,7 +8,7 @@ This is a solution to the [FAQ accordion card challenge on Frontend Mentor](http
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://stalwart-froyo-8ab1ba.netlify.app/](
 
 ## My process
 
