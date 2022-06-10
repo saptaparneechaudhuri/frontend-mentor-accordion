@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+:root {
+  --text-dark-blue: hsl(238, 29%, 16%);
+  --text-soft-red: hsl(14, 88%, 65%);
+  --text-grayish-dark-blue-extreme: hsl(237, 12%, 33%);
+  --text-grayish-dark-blue-regular: hsl(240, 6%, 50%);
+
+  --background-violet: hsl(273, 75%, 66%);
+  --background-blue: hsl(240, 73%, 65%);
+
+  --divider-blue: hsl(240, 5%, 91%);
+}
+*,
+*::befor,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.75rem;
+  min-height: 100vh;
+  background-image: linear-gradient(
+    var(--background-violet),
+    var(--background-blue)
+  );
+  padding: 10rem 2rem;
+  color: var(--text-dark-blue);
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+}
+
+.card {
+  background-color: #ffff;
+  background-image: url("/images/bg-pattern-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 5%;
+  background-size: 15rem;
+
+  border-radius: 2rem;
+  max-width: 56.2rem;
+  padding: 2.875rem 1.5rem;
+}
+
+.card-box {
+  display: none;
+}
+
+.card-image {
+  position: relative;
+}
+
+.card-image img {
+  display: block;
+  position: absolute;
+  /* if width > max-width; let the browser use max-width.
+if width < max-width; let the browser use width. */
+  width: 100%;
+  height: auto;
+  max-width: 15rem;
+
+  top: -6.8rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.card-text {
+  padding-top: 7rem;
+}
+
+.accordion-item {
+  padding-top: 1rem;
+  border-bottom: 1px solid var(--divider-blue);
+}
+
+.accordion-item h2 {
+  margin-bottom: 0;
+}
+
+.accordion-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
+  text-align: left;
+  border: none;
+  background-color: transparent;
+  padding: 0.2rem;
+  font-size: 0.9rem;
+  font-family: "Kumbh Sans", sans-serif;
+  margin-bottom: 1rem;
+}
+
+.accordion-button.open {
+  font-weight: 700;
+  color: var(--text-grayish-dark-blue-extreme);
+}
+
+.accordion-button.open::after {
+  transform: rotate(180deg);
+}
+
+.accordion-button::after {
+  content: "";
+  display: block;
+  border: none;
+  width: 0.8rem;
+  height: 1rem;
+  background-image: url("/images/icon-arrow-down.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  transition: transform 0.5s ease;
+}
+
+.accordion-button:focus-visible,
+.accordion-button:focus {
+  border: none;
+  outline: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.accordion-body {
+  position: relative;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.8s ease;
+  overflow-y: auto;
+}
+
+/* Desktop */
+
+@media (min-width: 56rem) {
+  body {
+    padding: 5rem;
+  }
+  .card {
+    display: flex;
+    margin: 0 auto;
+    padding: 4.375rem 6.25rem 4.375rem 0;
+    position: relative;
+    background-image: url("/images/bg-pattern-desktop.svg");
+    background-size: 25rem;
+    background-repeat: no-repeat;
+    background-position: -13% center;
+  }
+
+  .card-box {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 58%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 10;
+  }
+
+  .card-image,
+  .card-text {
+    flex: 1;
+  }
+  .card-image {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .card-image img {
+    /* position: relative; */
+    top: auto;
+    left: auto;
+    transform: translateX(-4rem);
+    max-width: 25rem;
+  }
+
+  .card-text {
+    padding-top: 0;
+  }
+
+  .accordion-button:hover {
+    color: var(--text-soft-red);
+  }
+}
